@@ -8,6 +8,13 @@ public class MembroComunideEscolar extends Persoa {
         this.nomeCentro = nomCentro;
     }
 
+    public MembroComunideEscolar() {
+        super();
+        this.codigoCentro = 0;
+        this.nomeCentro = "desconocido";
+
+    }
+
     public int getCodigoCentro() {
         return this.codigoCentro;
     }

@@ -39,22 +39,51 @@ public class Hora {
     public Integer getHoras() {
         return this.horas;
     }
-    public void setHoras(String nome) {
-        this.horas = horas;
+
+    public void setHoras(int horas) {
+        if (horas<24 && horas>=0) {
+            this.horas = horas;
+        }
+        else {
+            System.out.println("Error: " + horas + " no es valor válido para las horas.");
+        }
     }
 
     public Integer getMinutos() {
         return this.minutos;
     }
-    public void setMinutos(String nome) {
-        this.minutos = minutos;
+
+    public void setMinutos(int minutos) {
+        if (minutos<60 && minutos>=0) {
+            this.minutos = minutos;
+        }
+        else {
+            System.out.println("Error: " + minutos + " no es valor válido para los minutos.");
+        }
     }
 
     public Integer getSegundos() {
         return this.segundos;
     }
-    public void setSegundos(String nome) {
-        this.segundos = segundos;
+
+    public void setSegundos(int segundos) {
+        if (segundos<60 && segundos>=0) {
+            this.segundos = segundos;
+        }
+        else {
+            System.out.println("Error: " + segundos + " no es valor válido para los segundos.");
+        }
+    }
+
+    private void iniciaACero( ){
+        horas = 0;
+        minutos = 0;
+        segundos = 0;
+
+    }
+
+    public String toString() {
+        return "Horas: "+horas+" minutos: "+minutos+" segundos: "+segundos;
     }
 
     public static void main(String [] args) {

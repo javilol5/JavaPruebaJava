@@ -77,27 +77,31 @@ public class exemplosArray {
             }
         }
 
+//        String dniBajo() {
+//            String menorDni = equipo[0].getDni();
+//            char menorLetra = menorDni.charAt(menorDni.length() - 1);
+//
+//            for (Persoa persona : equipo) {
+//                String dniActual = persona.getDni();
+//                char letraActual = dniActual.charAt(dniActual.length() - 1);
+//
+//                if (letraActual < menorLetra) {
+//                    menorLetra = letraActual;
+//                    menorDni = dniActual;
+//                }
+//            }
+//
+//            return menorDni;
+//        }
 
 
-
-
-        String dniBajo() {
-            String menorDni = equipo[0].getDni();
-            char menorLetra = menorDni.charAt(menorDni.length() - 1);
-
-            for (Persoa persona : equipo) {
-                String dniActual = persona.getDni();
-                char letraActual = dniActual.charAt(dniActual.length() - 1);
-
-                if (letraActual < menorLetra) {
-                    menorLetra = letraActual;
-                    menorDni = dniActual;
-                }
+        Persoa dniMenor = equipo[0];
+        for (int i = 1; i < equipo.length; i++){
+            if (dniMenor.dni.compareTo(equipo[i].dni)>0){
+                dniMenor = equipo[i];
             }
-
-            return menorDni;
         }
-
+        System.out.println("O dni " + dniMenor.dni + " de " + dniMenor.nome + " e lexicograficamente menor");
 
     }
 

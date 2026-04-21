@@ -23,6 +23,23 @@ public class Persoa {
         this.nome = nome;
     }
 
+    public int getEdade() {
+        return this.edade;
+    }
+
+    public void setEdade(int edade) {
+        this.edade = edade;
+    }
+
+    public String getDni() {
+        return this.dni;
+    }
+
+    public void setDni(String nome) {
+        this.dni = dni;
+    }
+
+
     public static void main(String [] args) {
         Persoa p1 = new Persoa();
         Persoa p2 = new Persoa("Manuel","1234F",45);

@@ -36,6 +36,21 @@ public class Hora {
 
     }
 
+    public Hora(int[] hora){
+        if (hora.length > 3) {
+            System.out.println("Error: el array no puede tener más de 3 elementos.");
+            iniciaACero();
+        }
+        else {
+            if (hora.length > 0) this.horas = hora[0];
+            else setHoras(0);
+            if (hora.length > 1) this.minutos = hora[1];
+            else setMinutos(0);
+            if (hora.length > 2) this.segundos = hora[2];
+            else setSegundos(0);
+        }
+    }
+
     public Integer getHoras() {
         return this.horas;
     }

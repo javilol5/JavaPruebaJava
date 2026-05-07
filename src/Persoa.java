@@ -2,17 +2,20 @@ public class Persoa {
     public String nome;
     public String dni;
     public int edade;
+    public double estatura;
 
     public Persoa() {
         nome = "";
         dni = "0000000F";
         edade = 0;
+        estatura = 0;
     }
 
-    public Persoa(String nome, String dni, int edade) {
+    public Persoa(String nome, String dni, int edade, double estatura) {
         this.nome = nome;
         this.dni = dni;
         this.edade = edade;
+        this.estatura = estatura;
     }
 
     public String getNome() {
@@ -39,10 +42,20 @@ public class Persoa {
         this.dni = dni;
     }
 
+    public void mostrarDatos() {
+        System.out.println("Nome: " + nome + " Dni: " + dni + " Edade: " + edade + " Estatura: " + estatura);
+    }
+
+    @Override
+    public boolean equals(Object outro) {
+        Persoa outroPersoa = (Persoa) outro;
+        if (this.estatura == outroPersoa.estatura) return true;
+        return false;
+    }
 
     public static void main(String [] args) {
         Persoa p1 = new Persoa();
-        Persoa p2 = new Persoa("Manuel","1234F",45);
+        Persoa p2 = new Persoa("Manuel","1234F",45,1.67);
         System.out.println(p1.nome);
         System.out.println(p2.nome + " " + p2.dni + " " + p2.edade);
     }

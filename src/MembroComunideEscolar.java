@@ -3,7 +3,7 @@ public class MembroComunideEscolar extends Persoa {
     private String nomeCentro;
 
     public MembroComunideEscolar (String nome, String dni, int edade, int codCentro, String nomCentro){
-        super(nome,dni,edade);
+        super(nome,dni,edade,0);
         this.codigoCentro = codCentro;
         this.nomeCentro = nomCentro;
     }

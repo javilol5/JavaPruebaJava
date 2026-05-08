@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Persoa implements Comparable<Persoa>{
     public String nome;
     public String dni;
@@ -56,20 +58,35 @@ public class Persoa implements Comparable<Persoa>{
 
     @Override
     public int compareTo(Persoa outra) {
-        int resultadoCom = this.dni.compareTo(outra.dni);
+        /*int resultadoCom = this.dni.compareTo(outra.dni);
         System.out.println(resultadoCom);
         if (resultadoCom > 0) return 1;
         else if (resultadoCom < 0) return -1;
-        return 0;
+        return 0;*/
+        return this.dni.compareTo(outra.dni);
+    }
+
+    public String toString() {
+        return nome + ", " + dni + ", " + edade + ", " + estatura;
     }
 
     public static void main(String [] args) {
-        /*Persoa p1 = new Persoa();
+        Persoa p1 = new Persoa();
         Persoa p2 = new Persoa("Manuel","1234F",45,1.67);
         System.out.println(p1.nome);
         System.out.println(p2.nome + " " + p2.dni + " " + p2.edade);
-        Persoa p3 = new Persoa("Pepe","4567H",35,1.64);*/
-        return this.dni.compareTo(outra dni)
+        Persoa p3 = new Persoa("Pepe","4567H",35,1.64);
+        System.out.println(p3.compareTo(p3));
+        ComparadorEdadesPersoa compEdades = new ComparadorEdadesPersoa();
+        System.out.println(compEdades.compare(p2,p3));
+        Persoa [] individuos = new Persoa [3];
+        individuos[0] = p2;
+        individuos[1] = p1;
+        individuos[2] = p3;
+        Arrays.sort(individuos);
+        System.out.println(Arrays.toString(individuos));
+        Arrays.sort(individuos, compEdades);
+        System.out.println(Arrays.toString(individuos));
     }
 
 

@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 
 public class Futbolista extends Persoa implements Comparable<Persoa> {
 
@@ -71,6 +73,31 @@ public class Futbolista extends Persoa implements Comparable<Persoa> {
         f2.setNome("Messi");
         System.out.println(f1.nome.equals(f2.nome));
 
+        ArrayList<Futbolista> equipo;
+        equipo = new ArrayList();
+        Futbolista fu1 = new Futbolista("Pepe", "1553A",19,1.23,2);
+        Futbolista fu2 = new Futbolista("Pablo", "1023AB",69,1.91,0);
+        Futbolista fu3 = new Futbolista("Pedro", "1123C",17,2.01,3);
+        equipo.add(fu1);
+        equipo.add(fu2);
+        equipo.add(fu3);
+        System.out.println(equipo);
+
+
+//        ArrayList <Persoa> equipo3 = new ArrayList<>();
+//        equipo3.add(equipo[1]);
+//        equipo3.add(equipo[2]);
+//        System.out.println(equipo3);
+
+
+        for (int i=0;i<equipo.size();i++) {
+            System.out.println(equipo.get(i));
+        }
+
+        Iterator<Futbolista> it = equipo.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
 
     }
 }

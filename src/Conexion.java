@@ -1,4 +1,5 @@
 import java.sql.*;
+import UsuarioDAO;
 
 public class Conexion {
 
@@ -25,6 +26,13 @@ public class Conexion {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        resultados.close();
+        sentenciaP.close();
+        conexion.close();
+        //Usando obxecto DAO
+        UsuarioDAO.crearUsuario (new Persoa("Victor","88888",45,1.90));
+
+
     }
 
 

@@ -17,7 +17,7 @@ public class UsuarioDAO {
     public static void crearUsuario(Persoa usuario) {
         if (usuario != null) {
             Connection conexion = conectaBD ( "10.0.8.173",5432,"usuarios","postgres", "postgres");
-            String sql = "INSERT INTO usuarios(nome, dni, edade) + VALUES (?, ?, ?);";
+            String sql = "INSERT INTO Persoa(nome, dni, edade) + VALUES (?, ?, ?);";
 
 
             try{
@@ -38,3 +38,4 @@ public class UsuarioDAO {
 
 
 }
+

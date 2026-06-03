@@ -6,8 +6,8 @@ public class Futbolista extends Persoa implements Comparable<Persoa> {
 
     public int numGoles;
 
-    public Futbolista (String nome, String dni, int edade, double estatura, int numGoles) {
-        super(nome,dni,edade,estatura);
+    public Futbolista (String nome, String dni, int edade/*, double estatura*/, int numGoles) {
+        super(nome,dni,edade/*,estatura*/);
         this.numGoles = numGoles;
     }
 
@@ -63,8 +63,8 @@ public class Futbolista extends Persoa implements Comparable<Persoa> {
     };
 
     public static void main(String [] args) {
-        Futbolista f1 = new Futbolista("Messi","1010M",38,1.70, 672);
-        Futbolista f2 = new Futbolista("Cr7","7777C",41,1.87, 971);
+        Futbolista f1 = new Futbolista("Messi","1010M",38/*,1.70*/, 672);
+        Futbolista f2 = new Futbolista("Cr7","7777C",41/*,1.87*/, 971);
         System.out.println(f1);
         System.out.println(f2);
         System.out.println(f1.compareTo(f2));
@@ -75,9 +75,9 @@ public class Futbolista extends Persoa implements Comparable<Persoa> {
 
         ArrayList<Futbolista> equipo;
         equipo = new ArrayList();
-        Futbolista fu1 = new Futbolista("Pepe", "1553A",19,1.23,2);
-        Futbolista fu2 = new Futbolista("Pablo", "1023AB",69,1.91,0);
-        Futbolista fu3 = new Futbolista("Pedro", "1123C",17,2.01,3);
+        Futbolista fu1 = new Futbolista("Pepe", "1553A",19/*,1.23*/,2);
+        Futbolista fu2 = new Futbolista("Pablo", "1023AB",69/*,1.91*/,0);
+        Futbolista fu3 = new Futbolista("Pedro", "1123C",17/*,2.01*/,3);
         equipo.add(fu1);
         equipo.add(fu2);
         equipo.add(fu3);

@@ -4,7 +4,7 @@ public class Traballador2 extends Persoa{
     public String estaturaT;
 
     public Traballador2 (String nome, String dni, int edade, double estatura, double salario, String estaturaT ) {
-        super(nome,dni,edade,estatura);
+        super(nome,dni,edade/*,estatura*/);
         this.salario = salario;
         this.estaturaT = estaturaT;
     }
@@ -23,7 +23,7 @@ public class Traballador2 extends Persoa{
 
     public static void main (String [] args) {
         Traballador2 t = new Traballador2("Juan","2222J",46,1.93, 1380, "M");
-        Persoa p = new Persoa("Pepe", "1111H", 37, 1.81);
+        Persoa p = new Persoa("Pepe", "1111H", 37/*, 1.81*/);
         Persoa persoas [] = new Persoa[2];
         persoas[0] = p;
         persoas[1] = t;

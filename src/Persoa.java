@@ -13,12 +13,14 @@ public class Persoa implements Comparable<Persoa>{
         estatura = 0;
     }
 
-    public Persoa(String nome, String dni, int edade, double estatura) {
+    public Persoa(String nome, String dni, int edade/*, double estatura*/) {
         this.nome = nome;
         this.dni = dni;
         this.edade = edade;
-        this.estatura = estatura;
+        //this.estatura = estatura;
     }
+
+
 
     public String getNome() {
         return this.nome;
@@ -69,7 +71,7 @@ public class Persoa implements Comparable<Persoa>{
     public String toString() {
         return nome + ", " + dni + ", " + edade + ", " + estatura;
     }
-
+/*
     public static void main(String [] args) {
         Persoa p1 = new Persoa();
         Persoa p2 = new Persoa("Manuel","1234F",45,1.67);
@@ -90,5 +92,5 @@ public class Persoa implements Comparable<Persoa>{
     }
 
 
-
+*/
 }

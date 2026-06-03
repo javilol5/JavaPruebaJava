@@ -40,7 +40,7 @@ public class UsuarioDAO2 {
                 int edade = resultados.getInt("edade");
                 double estatura = resultados.getDouble("estatura");
 
-                Persoa p = new Persoa(nome, dni, edade, estatura);
+                Persoa p = new Persoa(nome, dni, edade/*,estatura*/);
 
                 lista.add(p);
             }

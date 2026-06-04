@@ -13,8 +13,16 @@ public class Conexion {
         try{
             conexion = DriverManager.getConnection(url, "postgres", "postgres");
             System.out.println("conectado");
-            String crearTaboasql = " CREATE TABLE persoas(nome VARCHAR (50),"
-                    +"dni VARCHAR (9), edade INTEGER);";
+            String crearTaboasql =
+                    """ 
+                    CREATE TABLE IF NOT EXISTS oficina (
+                    cif         VARCHAR(9)   PRIMARY KEY,
+                    nome        VARCHAR(100) NOT NULL,
+                    direccion   VARCHAR(200) NOT NULL,
+                    localidade  VARCHAR(100) NOT NULL,
+                    provincia   VARCHAR(100) NOT NULL
+            )""";
+
             //sentencia = conexion.createStatement();
             //sentencia.execute((crearTaboasql));
             //sentencia.executeUpdate("INSERT INTO persoas (nome, dni, edade)"+"VALUES ('Pepe','1234J', 18)");
@@ -44,8 +52,8 @@ public class Conexion {
             conexion.close();
 
 
-            System.out.println(UsuarioDAO.obterUsuario("12345678J"));
-            UsuarioDAO.modificarUsuario("12345678J", novoNome, novoEdade);
+//            System.out.println(UsuarioDAO.obterUsuario("12345678J"));
+//            UsuarioDAO.modificarUsuario("12345678J", novoNome, novoEdade);
 
 
 
